@@ -1,0 +1,3 @@
+rootProject.name='GradleConfigDemo'
+include ':app'
+include ':moduleapplication'

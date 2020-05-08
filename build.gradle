@@ -1,0 +1,44 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+/**
+ *  buildscript：定义了 Android 编译工具的类路径。
+ */
+buildscript {
+
+    /**
+     * repositories中,jCenter是一个著名的 Maven 仓库。
+     */
+    repositories {
+        // 从Android Studio3.0后新增了google()配置，可以引用google上的开源项目
+        google()
+        jcenter()
+        
+    }
+    dependencies {
+        //此处是android的插件gradle，gradle是一个强大的项目构建工具
+        classpath 'com.android.tools.build:gradle:3.6.3'
+        
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+/**
+ * allprojects:中定义的属性会被应用到所有 moudle 中，但是为了保证每个项目的独立性，我们一般不会在这里面操作太多共有的东西。
+ */
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        
+    }
+}
+
+// 运行gradle clean时，执行此处定义的task任务。
+// 该任务继承自Delete，删除根目录中的build目录。
+// 相当于执行Delete.delete(rootProject.buildDir)。
+// gradle使用groovy语言，调用method时可以不用加（）。
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
