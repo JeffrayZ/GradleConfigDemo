@@ -140,6 +140,13 @@ android {
     sourceSets {//目录指向配置
         main {
             jniLibs.srcDirs = ['libs'] //指定lib库目录
+//            manifest.srcFile 'AndroidManifest.xml' // AndroidManifest路径
+//            java.srcDirs = ['src'] // java文件路径
+//            resource.srcDirs = ['src'] // 全部资源文件路径
+//            aidl.srcDirs = ['src'] // aidl文件路径
+//            renderscript.srcDirs = ['src'] // renderscript文件路径
+//            res.srcDirs = ['res'] // res文件路径
+//            assets.srcDirs = ['assets'] // assets文件路径
         }
     }
 
